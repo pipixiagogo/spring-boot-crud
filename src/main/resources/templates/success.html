@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta content="text/html;charset=UTF-8"/>
+    <title>Title</title>
+</head>
+<body>
+<h1>成功页面</h1>
+<!--不会转义变成字符串-->
+<div th:text="${hello}">这是显示信息</div>
+<!--会转义变成样式-->
+<div th:utext="${hello}"></div>
+<hr/>
+<h4 th:text="${tx}" th:each="tx :${text}"></h4>
+<h4>
+    <span th:each="tx :${text}">[[${tx}]]</span>
+</h4>
+</body>
+</html>
