@@ -16,6 +16,8 @@ public class SpringBootCrudApplication {
 		SpringApplication.run(SpringBootCrudApplication.class, args);
 	}
 
+
+	//自定义的视图解析
 	@Bean
 	public ViewResolver myview(){
 		return new Myview();
